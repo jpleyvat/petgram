@@ -1,0 +1,6 @@
+{
+    "version": 2,
+    "name": "petgram",
+    "builds": [{ "use": "@now/static-builds", "src": "package.json" }],
+    "routes": [{ "src": "/.*", "dest": "/index.html"}]
+}
