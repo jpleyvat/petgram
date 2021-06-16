@@ -1,0 +1,46 @@
+{
+  "name": "petgram",
+  "version": "1.0.0",
+  "description": "Like instagram but JUST with pets.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "lint": "standard --fix",
+    "dev": "webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpleyvat/petgram.git"
+  },
+  "keywords": [
+    "pet",
+    "gram"
+  ],
+  "author": "jpleyvat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpleyvat/petgram/issues"
+  },
+  "homepage": "https://github.com/jpleyvat/petgram#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "standard": "^16.0.3",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "standard": {
+    "ignore": [
+      "/api,/**"
+    ]
+  }
+}
