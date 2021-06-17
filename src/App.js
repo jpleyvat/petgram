@@ -2,7 +2,7 @@ import React, { ReactDOM } from 'react'
 
 // Components
 import { ListOfCategories } from './components/ListOfCategories'
-import { ListOfPhotoCards } from './components/ListOfFotocards'
+import { ListOfPhotoCards } from './container/ListOfPhotoCards'
 import { Logo } from './components/Logo'
 
 // Styles
@@ -13,6 +13,6 @@ export const App = () => (
     <GlobalStyle />
     <Logo />
     <ListOfCategories />
-    <ListOfPhotoCards />
+    <ListOfPhotoCards categoryId={1} />
   </div>
 )
