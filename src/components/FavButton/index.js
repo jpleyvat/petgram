@@ -1,6 +1,8 @@
 import React from 'react'
+//
 // Styles
 import { Button } from './styles'
+
 // Icons
 import { MdFavoriteBorder, MdFavorite } from 'react-icons/md'
 
