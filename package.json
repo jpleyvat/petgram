@@ -8,17 +8,14 @@
         "build": "webpack",
         "lint": "standard",
         "fix": "standard --fix",
-        "dev": "webpack serve",
+        "dev": "webpack serve --history-api-fallback",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jpleyvat/petgram.git"
     },
-    "keywords": [
-        "pet",
-        "gram"
-    ],
+    "keywords": ["pet", "gram"],
     "author": "jpleyvat",
     "license": "ISC",
     "bugs": {
@@ -26,6 +23,7 @@
     },
     "homepage": "https://github.com/jpleyvat/petgram#readme",
     "dependencies": {
+        "@reach/router": "^1.3.4",
         "apollo-boost": "^0.4.9",
         "graphql": "^15.5.0",
         "intersection-observer": "^0.12.0",
@@ -54,18 +52,11 @@
         "webpack-dev-server": "^3.11.2"
     },
     "standard": {
-        "ignore": [
-            "/api/**"
-        ]
+        "ignore": ["/api/**"]
     },
     "eslintConfig": {
-        "extend": [
-            "./node_modules/standard/eslintrc.json"
-        ],
-        "exclude": [
-            "*.json",
-            "**/*.json"
-        ]
+        "extend": ["./node_modules/standard/eslintrc.json"],
+        "exclude": ["*.json", "**/*.json"]
     },
     "prettier": {
         "extend": "@/standard/eslintrc.json"
