@@ -14,12 +14,12 @@ import { NotRegisteredUser } from './pages/NotRegisteredUser'
 // Router
 import { Router } from '@reach/router'
 
+// Context
+import Context from './Context'
+
 // Styles
 import { GlobalStyle } from './styles/GlobalStyles'
 
-const UserLogged = ({ children }) => {
-  return children({ isAuth: false })
-}
 export const App = () => {
   return (
     <div>
@@ -30,20 +30,21 @@ export const App = () => {
         <Home path='/pet/:categoryId' />
         <Detail path='/detail/:detailId' />
       </Router>
-      <UserLogged>
+      <Context.Consumer>
         {({ isAuth }) =>
-          isAuth ? (
-            <Router>
-              <Favs path='/favs' />
-              <User path='/user' />
-            </Router>
-          ) : (
-            <Router>
-              <NotRegisteredUser path='/favs' />
-              <NotRegisteredUser path='/user' />
-            </Router>
-          )}
-      </UserLogged>
+          isAuth
+            ? (
+              <Router>
+                <Favs path='/favs' />
+                <User path='/user' />
+              </Router>
+              ) : (
+                <Router>
+                  <NotRegisteredUser path='/favs' />
+                  <NotRegisteredUser path='/user' />
+                </Router>
+              )}
+      </Context.Consumer>
       <NavBar />
     </div>
   )
